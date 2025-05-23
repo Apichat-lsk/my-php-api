@@ -1,7 +1,0 @@
-{
-    "name": "my-php-api",
-    "description": "PHP API for my project",
-    "require": {
-        "firebase/php-jwt": "^6.11"
-    }
-}
