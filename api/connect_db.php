@@ -1,7 +1,7 @@
 <?php
-$host = "localhost";
+$host = "mysql";
 $username = "root";
-$password = ""; // ถ้าใช้ XAMPP หรือ Laragon ปกติจะไม่มีรหัสผ่าน
+$password = "password"; // ถ้าใช้ XAMPP หรือ Laragon ปกติจะไม่มีรหัสผ่าน
 $dbname = "laragon_db";
 
 // สร้างการเชื่อมต่อ
@@ -12,5 +12,5 @@ if ($conn->connect_error) {
     die("เชื่อมต่อฐานข้อมูลล้มเหลว: " . $conn->connect_error);
 }
 
-echo "เชื่อมต่อฐานข้อมูลสำเร็จ!";
+// echo "เชื่อมต่อฐานข้อมูลสำเร็จ!";
 ?>
