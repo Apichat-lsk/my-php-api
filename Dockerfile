@@ -1,10 +1,10 @@
 FROM php:8.2-apache
 
-# เปิดใช้งาน mod_rewrite และติดตั้ง mysqli
+# ติดตั้ง mysqli และเปิด mod_rewrite
 RUN docker-php-ext-install mysqli && a2enmod rewrite
 
-# คัดลอกไฟล์ทั้งหมดไปยัง /var/www/html
-COPY . /var/www/html
+# ตั้งค่า DirectoryIndex
+RUN echo "DirectoryIndex index.php index.html" > /etc/apache2/conf-available/directoryindex.conf     && a2enconf directoryindex
 
-# กำหนด working directory
 WORKDIR /var/www/html
+COPY . /var/www/html
